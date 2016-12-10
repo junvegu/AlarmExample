@@ -31,4 +31,11 @@ public class YourService extends Service
     {
         return null;
     }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        alarm.cancelAlarm(this);
+    }
 }
